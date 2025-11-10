@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gayanthi Madhushani - Software Engineer & Digital Marketer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* --- CLEAN MINIMALIST THEME: EARTHY TONES --- */
+
+        /* BASE STYLES */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333; 
+            overflow-x: hidden;
+            background-color: #F9F7F3; /* Soft Off-White/Cream Background */
+        }
+
+        /* NAVIGATION */
+        nav {
+            background: #FFFFFF; /* Clean White Nav Bar */
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+        }
+
+        nav .container {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav .logo {
+            color: #1C6758; /* Deep Teal Accent */
+            font-size: 1.7rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #D9B382; /* Tan Secondary Accent on hover */
+        }
+        
+        /* CONTAINER & TITLE */
+        section {
+            padding: 100px 2rem;
+        }
+
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 2.8rem;
+            text-align: center;
+            margin-bottom: 4rem;
+            color: #1C6758; /* Deep Teal */
+            font-weight: 700;
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background-color: #D9B382; /* Tan line */
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
+        /* HERO SECTION */
+        .hero {
+            background: #FFFFFF; /* White Hero Section */
+            color: #333;
+            padding: 150px 2rem 100px;
+            text-align: center;
+            margin-top: 60px;
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        }
+
+        /* 🖼️ PROFILE PHOTO ANIMATION */
+        .profile-photo {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 5px solid #1C6758; /* Deep Teal Border */
+            margin-bottom: 2rem;
+            object-fit: cover;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        
+        .profile-photo:hover {
+            transform: scale(1.05) rotate(1deg); /* Subtle scale and rotation on hover */
+            box-shadow: 0 15px 40px rgba(28, 103, 88, 0.4); /* Teal glowing shadow */
+        }
+
+        .hero h1 {
+            color: #1C6758; 
+            font-size: 3.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+        
+        .social-links a {
+            color: white;
+            background: #1C6758; /* Deep Teal Button */
+            text-decoration: none;
+            padding: 0.8rem 2.5rem;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: background 0.3s, transform 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.7rem;
+            margin: 0.5rem;
+        }
+
+        .social-links a:hover {
+            background: #D9B382; /* Tan Accent on hover */
+            color: #1C6758;
+            transform: translateY(-2px);
+        }
+
+        /* ABOUT SECTION */
+        .about-content {
+            display: flex;
+            gap: 3rem;
+            align-items: flex-start;
+        }
+
+        .about-text {
+            flex: 2;
+        }
+
+        .about-text p {
+            margin-bottom: 1rem;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        .info-grid {
+            flex: 1;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        .info-item {
+            background: #FFFFFF;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            border: 1px solid #eee;
+        }
+
+        .info-item strong {
+            color: #D9B382; /* Tan Accent */
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        /* EXPERIENCE SECTION */
+        .experience {
+            background: #F0EDE8; /* Subtle background contrast */
+        }
+        
+        .experience-timeline {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .timeline-item {
+            background: #FFFFFF;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+            border-left: 5px solid #1C6758; /* Deep Teal Accent */
+        }
+        
+        .timeline-item h3 {
+            color: #1C6758;
+            margin-bottom: 0.2rem;
+        }
+
+        .timeline-item .role {
+            color: #D9B382; /* Tan Accent */
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+        
+        .timeline-item ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .timeline-item li {
+            position: relative;
+            padding-left: 1.5em;
+            margin-bottom: 0.5em;
+        }
+        
+        .timeline-item li::before {
+            content: "•";
+            color: #D9B382; 
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+            position: absolute;
+            left: 0;
+        }
+        
+        /* SKILLS SECTION */
+        .skills {
+            background: #F9F7F3;
+        }
+        
+        .tech-stack-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .skill-category {
+            background: #FFFFFF;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            border-top: 3px solid #1C6758;
+            transition: transform 0.3s;
+        }
+        
+        .skill-category:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+        
+        .skill-category h3 {
+            color: #1C6758;
+            margin-bottom: 1.5rem;
+            font-size: 1.4rem;
+            border-bottom: 2px solid #D9B382;
+            padding-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .skill-category ul {
+            list-style: none;
+            columns: 2;
+        }
+        
+        /* PROJECTS SECTION */
+        .projects {
+            background: #F0EDE8;
+        }
+        
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: #FFFFFF;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        /* 🚀 PROJECT CARD HOVER ANIMATION */
+        .project-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+        }
+        
+        .project-card:hover .project-image {
+            transform: scale(1.05); /* Zoom effect on image */
+        }
+
+        .project-image {
+            width: 100%;
+            height: 250px;
+            background-color: #E6E0D5;
+            background-size: cover; 
+            background-position: center; 
+            background-repeat: no-repeat;
+            border-bottom: 3px solid #D9B382;
+            transition: transform 0.4s ease; /* Transition for the zoom effect */
+        }
+        
+        /* 📸 PROJECT IMAGES - USING UPLOADED FILES */
+        .project-image.chatbot { 
+            background-image: url('/assets/cute-bot-say-users-hello.avif'); 
+        } 
+        .project-image.taxi { 
+            background-image: url('/assets/taxiicc.jpeg'); 
+        } 
+        .project-image.portfolio { 
+            background-image: url('/assets/picc.png'); 
+        } 
+
+        .project-content {
+            padding: 1.5rem;
+        }
+
+        .project-content h3 {
+            color: #1C6758;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .tool-tag {
+            background: #EAF3E8;
+            color: #1C6758;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            display: inline-block;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .project-link {
+            background: #D9B382;
+            color: #1C6758;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            margin-top: 1rem;
+            transition: background 0.3s;
+        }
+
+        .project-link:hover {
+            background: #1C6758;
+            color: white;
+        }
+        
+        /* EDUCATION SECTION */
+        .education-timeline {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .education-item {
+            background: #FFFFFF;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            border-left: 5px solid #D9B382;
+        }
+
+        .education-item h3 {
+            color: #1C6758;
+            margin-bottom: 0.5rem;
+        }
+
+        .education-item .year {
+            color: #D9B382;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        /* CONTACT SECTION */
+        .contact {
+            background: #1C6758; /* Deep Teal solid background */
+            color: white;
+            text-align: center;
+            clip-path: polygon(0 0, 100% 10%, 100% 100%, 0% 100%); 
+            padding-top: 150px;
+        }
+
+        .contact .section-title {
+            color: white;
+        }
+        
+        .contact .section-title::after {
+            background-color: #D9B382;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .contact-item a, .contact-item span {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .contact-item a:hover {
+            color: #D9B382;
+        }
+        
+        .contact-item .icon {
+            font-size: 1.5rem;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.9rem;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 1024px) {
+            .about-content {
+                flex-direction: column;
+                gap: 2rem;
+            }
+            .about-text {
+                order: 2;
+            }
+            .info-grid {
+                order: 1;
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+            nav ul {
+                display: none;
+            }
+            nav .container {
+                justify-content: center;
+            }
+            .hero, .contact {
+                clip-path: none;
+            }
+            .section-title {
+                font-size: 2rem;
+            }
+            .social-links {
+                display: flex;
+                flex-direction: column;
+            }
+            .contact-info {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <div class="logo">GAYANTHI MADHUSHANI</div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <img src="assets/WhatsApp Image 2025-10-28 at 16.19.48_ebcdca36.jpg" alt="Gayanthi Madhushani" class="profile-photo">
+            
+            <h1>Gayanthi Madhushani Hettiarachchi</h1>
+            <p class="subtitle">Full-Stack Software Engineer | Digital Marketing Strategist</p>
+            <p>Results-driven Software Engineer with a BTEC Level 5 HND in Computing, pursuing a BEng (Hons) in Software Engineering. Skilled in full-stack development, digital marketing, and data-driven design, combining technical and creative expertise to deliver innovative, user-focused solutions that drive business growth.</p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/madhushani-hettiarachchi-8619bb379" target="_blank" class="social-btn">
+                    <i class="fab fa-linkedin"></i> LinkedIn Profile
+                </a>
+                <a href="mailto:gmadusha192@gmail.com" class="social-btn">
+                    <i class="fas fa-envelope"></i> Email Me
+                </a>
+                <a href="/assets/H G Madhushani 02 (1).pdf" target="_blank" class="social-btn">
+        <i class="fas fa-file-alt"></i> Download CV
+    </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>I am a passionate Software Engineer currently pursuing a BEng (Hons) in Software Engineering with a BTEC Level 5 HND in Computing. My journey in technology began with a curiosity about how digital solutions can transform businesses and improve lives.</p>
+                    <p>With expertise spanning full-stack development, UI/UX design, and digital marketing, I bring a unique perspective to every project. I believe in creating solutions that are not only technically sound but also intuitive and user-friendly.</p>
+                    <p>My approach combines analytical thinking with creative problem-solving, allowing me to deliver projects that exceed expectations. I'm constantly learning and adapting to new technologies to stay at the forefront of the industry.</p>
+                </div>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <strong><i class="fas fa-graduation-cap"></i> Education</strong>
+                        BEng (Hons) Software Engineering
+                    </div>
+                    <div class="info-item">
+                        <strong><i class="fas fa-map-marker-alt"></i> Location</strong>
+                        Matara, Sri Lanka
+                    </div>
+                    <div class="info-item">
+                        <strong><i class="fas fa-envelope"></i> Email</strong>
+                        gmadusha192@gmail.com
+                    </div>
+                    <div class="info-item">
+                        <strong><i class="fas fa-globe"></i> Languages</strong>
+                        Sinhala, English (Professional Working Proficiency)
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2 class="section-title">Project Experience</h2>
+            <div class="experience-timeline">
+                <div class="timeline-item">
+                    <p class="role">Lead Developer & UI Designer</p>
+                    <h3>Digital Marketing Platform Project</h3>
+                    <p class="duration">2024 - Present</p>
+                    <ul>
+                        <li>Designed and implemented the full-stack architecture for a small-scale digital marketing management dashboard using PHP and MySQL.</li>
+                        <li>Developed a responsive and accessible user interface, resulting in a 30% improvement in campaign setup efficiency for mock users.</li>
+                        <li>Integrated a basic reporting module to visualize key performance indicators (KPIs) like CTR and conversion rate.</li>
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Technical & Professional Stack</h2>
+            <div class="tech-stack-section">
+                <div class="skill-category">
+                    <h3><i class="fas fa-code"></i> Programming & Frameworks</h3>
+                    <ul>
+                        <li>Front-End: HTML5, CSS3, JavaScript, jQuery</li>
+                        <li>Back-End: PHP, Python (Basic to Intermediate)</li>
+                        <li>Databases: MySQL, SQL</li>
+                        <li>Development Tools: VS Code, XAMPP</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-palette"></i> Design & UI/UX</h3>
+                    <ul>
+                        <li>Prototyping: Figma, Adobe XD</li>
+                        <li>Design Principles: Wireframing, User Flows, Accessibility</li>
+                        <li>Creative Tools: Canva (Advanced), CapCut Video Editor</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-bullhorn"></i> Digital Marketing & Analytics</h3>
+                    <ul>
+                        <li>Campaigns: Meta Ads (Facebook/Instagram), Google Ads (Basic)</li>
+                        <li>SEO/SEM: Keyword Research, On-Page Optimization</li>
+                        <li>Analytics: Google Analytics, Data Interpretation</li>
+                        <li>Strategy: Content Creation, Social Media Management</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-cogs"></i> Methodologies & Tools</h3>
+                    <ul>
+                        <li>Version Control: Git, GitHub/GitLab</li>
+                        <li>Project Management: Agile (Scrum/Kanban), Trello</li>
+                        <li>Testing: Unit Testing (Basic), Manual QA</li>
+                        <li>Soft Skills: Communication, Leadership, Adaptability</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image chatbot">
+                        </div>
+                    <div class="project-content">
+                        <h3>AI Chatbot System (NLP)</h3>
+                        <p>A sophisticated, rule-based chatbot designed to handle L1 support queries for banking and financial services. Focused on high-accuracy intent recognition and efficient query resolution.</p>
+                        <div class="tools">
+                            <span class="tool-tag">Python</span>
+                            <span class="tool-tag">NLP</span>
+                            <span class="tool-tag">JSON</span>
+                            <span class="tool-tag">System Design</span>
+                        </div>
+                        <a href="http://127.0.0.1:5501/project_chatbot/templates/index.html" target="_blank" class="project-link">View Demo <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image taxi">
+                        </div>
+                    <div class="project-content">
+                        <h3>Taxi Community App - UX/UI Case Study</h3>
+                        <p>Full UX/UI design process including user research, wireframing, and high-fidelity prototyping. Designed for enhanced driver-rider community features and safety protocols.</p>
+                        <div class="tools">
+                            <span class="tool-tag">Figma</span>
+                            <span class="tool-tag">User Research</span>
+                            <span class="tool-tag">Prototyping</span>
+                            <span class="tool-tag">Accessibility</span>
+                        </div>
+                        <a href="https://www.figma.com/design/R1IwqXIm1pgMlMrjTXRAlQ/Taxi-App--Community-?node-id=0-1&p=f" target="_blank" class="project-link">View Design <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image portfolio">
+                        </div>
+                    <div class="project-content">
+                        <h3>Freelance Photographer Portfolio</h3>
+                        <p>A dynamic, responsive, and database-backed portfolio website built for client acquisition. Features secure form submission and a customizable PHP-based gallery backend.</p>
+                        <div class="tools">
+                            <span class="tool-tag">HTML/CSS/JS</span>
+                            <span class="tool-tag">PHP</span>
+                            <span class="tool-tag">MySQL</span>
+                            <span class="tool-tag">Responsive Design</span>
+                        </div>
+                        <a href="#" class="project-link">View Live Site <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="education">
+        <div class="container">
+            <h2 class="section-title">Education & Certifications</h2>
+            <div class="education-timeline">
+                <div class="education-item">
+                    <h3>BEng (Hons) Software Engineering - Top-Up</h3>
+                    <p class="year">2025 - 2026 (Expected Graduation)</p>
+                    <p>Advanced specialization in distributed systems, modern architecture, and large-scale project management.</p>
+                </div>
+                <div class="education-item">
+                    <h3>Pearson BTEC Level 5 HND in Computing</h3>
+                    <p class="2025">Completed [2025]</p>
+                    <p>Core curriculum in object-oriented programming, data structures, and fundamental web technologies.</p>
+                </div>
+                <div class="education-item">
+                    <h3>[Relevant Certifications]</h3>
+                    <p class="2025"></p>
+                    <p>e.g., Google Analytics Certification, Meta Certified Digital Marketing Associate.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Let's Build Something Great</h2>
+            <p>I am actively seeking challenging Software Engineering roles and projects where I can leverage both my technical and marketing expertise. Let's connect!</p>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <div class="icon"><i class="fas fa-envelope"></i></div>
+                    <a href="mailto:gmadusha192@gmail.com">gmadusha192@gmail.com</a>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="icon"><i class="fab fa-linkedin"></i></div>
+                    <a href="https://www.linkedin.com/in/madhushani-hettiarachchi-8619bb379" target="_blank">LinkedIn Profile</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Built with <i class="fas fa-heart" style="color: #D9B382;"></i> by Gayanthi Madhushani Hettiarachchi &copy; 2025</p>
+    </footer>
+
+    <script>
+        // Smooth scrolling, navigation, and animation scripts...
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            const currentScroll = window.pageYOffset;
+            
+            if (currentScroll > 100) {
+                nav.style.background = '#FFFFFF'; /* Solid white on scroll */
+                nav.style.boxShadow = '0 5px 20px rgba(0,0,0,0.2)';
+            } else {
+                nav.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
+            }
+        });
+
+        // Scroll animation for sections/cards
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.project-card, .skill-category, .education-item, .timeline-item').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
