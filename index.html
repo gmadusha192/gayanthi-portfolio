@@ -482,6 +482,37 @@
         .video-phone video::-webkit-media-controls-panel {
             background: rgba(0,0,0,0.5);
         }
+
+        /* WHY ME SECTION */
+        .why-me-cards {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .why-me-card {
+            background: linear-gradient(135deg, #E6C9D9 0%, #D8B5C8 100%);
+            padding: 2rem 3rem;
+            border-radius: 50px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .why-me-card:hover {
+            transform: translateX(10px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .why-me-card p {
+            color: #333;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin: 0;
+            text-align: center;
+            font-weight: 500;
+        }
         
         
         /* PROJECTS SECTION */
@@ -974,6 +1005,35 @@
         </div>
     </section>
 
+     <!-- WHY ME SECTION -->
+    <section id="why-me" style="background: #F0EDE8; padding: 100px 2rem;">
+        <div class="container">
+            <h2 class="section-title" style="font-size: 3.5rem; margin-bottom: 4rem;">WHY ME?</h2>
+            
+            <div class="why-me-cards">
+                <div class="why-me-card">
+                    <p>Worked with well-known social media influencers on impactful campaigns.</p>
+                </div>
+
+                <div class="why-me-card">
+                    <p>Modeled for multiple brands, building strong visual and brand representation.</p>
+                </div>
+
+                <div class="why-me-card">
+                    <p>Skilled in creating engaging content that connects with audiences and drives results.</p>
+                </div>
+
+                <div class="why-me-card">
+                    <p>Experienced in content writing — crafting blogs, captions, and marketing copy that drives results.</p>
+                </div>
+
+                <div class="why-me-card">
+                    <p>Created authentic UGC (User-Generated Content) that boosts trust and engagement.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
 
     
     <section id="experience" class="experience">
@@ -1197,6 +1257,7 @@
 </body>
 
 </html>
+
 
 
 
