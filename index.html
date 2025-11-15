@@ -534,6 +534,25 @@
             transition: transform 0.4s ease, box-shadow 0.4s ease;
         }
 
+        /* PROJECTS SECTION */
+        .projects {
+            background: #F0EDE8;
+        }
+        
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: #FFFFFF;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+
         /* 🚀 PROJECT CARD HOVER ANIMATION */
         .project-card:hover {
             transform: translateY(-8px);
@@ -556,14 +575,12 @@
         }
         
         /* 📸 PROJECT IMAGES - USING UPLOADED FILES */
-        .project-image.chatbot { 
-            background-image: url('cute-bot-say-users-hello.avif'); 
-        } 
+        
         .project-image.taxi { 
-            background-image: url('taxiicc.jpeg'); 
+            background-image: url('/assets/cab.avif'); 
         } 
         .project-image.portfolio { 
-            background-image: url('picc.png'); 
+            background-image: url('/assets/photo\ cam.avif'); 
         } 
 
         .project-content {
@@ -604,7 +621,10 @@
             background: #1C6758;
             color: white;
         }
-        
+           
+            
+            
+
         /* EDUCATION SECTION */
         .education-timeline {
             display: flex;
@@ -1083,22 +1103,6 @@
             <h2 class="section-title">Featured Projects</h2>
             <div class="projects-grid">
                 <div class="project-card">
-                    <div class="project-image chatbot">
-                        </div>
-                    <div class="project-content">
-                        <h3>AI Chatbot System (NLP)</h3>
-                        <p>A sophisticated, rule-based chatbot designed to handle L1 support queries for banking and financial services. Focused on high-accuracy intent recognition and efficient query resolution.</p>
-                        <div class="tools">
-                            <span class="tool-tag">Python</span>
-                            <span class="tool-tag">NLP</span>
-                            <span class="tool-tag">JSON</span>
-                            <span class="tool-tag">System Design</span>
-                        </div>
-                        <a href="http://127.0.0.1:5501/project_chatbot/templates/index.html" target="_blank" class="project-link">View Demo <i class="fas fa-external-link-alt"></i></a>
-                    </div>
-                </div>
-
-                <div class="project-card">
                     <div class="project-image taxi">
                         </div>
                     <div class="project-content">
@@ -1237,6 +1241,7 @@
 </body>
 
 </html>
+
 
 
 
