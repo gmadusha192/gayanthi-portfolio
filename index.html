@@ -427,6 +427,61 @@
         .design-card:hover img {
             transform: scale(1.05);
         }
+
+        /* VIDEO SHOWCASE */
+        .video-showcase {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            padding: 2rem 0;
+        }
+
+        .video-phone {
+            position: relative;
+            width: 280px;
+            height: 560px;
+            background: #000;
+            border-radius: 40px;
+            padding: 15px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            border: 8px solid #2c2c2c;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            overflow: hidden;
+        }
+
+        .video-phone:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 30px 80px rgba(0,0,0,0.4);
+        }
+
+        .video-phone video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 30px;
+            background: #000;
+        }
+
+        .play-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 4rem;
+            color: rgba(255, 255, 255, 0.8);
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .video-phone:hover .play-overlay {
+            opacity: 0;
+        }
+
+        .video-phone video::-webkit-media-controls-panel {
+            background: rgba(0,0,0,0.5);
+        }
         
         
         /* PROJECTS SECTION */
@@ -835,6 +890,50 @@
         </div>
     </section>
 
+     <!-- VIDEO PORTFOLIO -->
+    <section id="videos" style="background: #F9F7F3; padding: 100px 2rem;">
+        <div class="container">
+            <h2 class="section-title">Sample Work - Content Video</h2>
+            <p style="text-align: center; margin-bottom: 3rem; color: #555;">Creative video content for social media and marketing campaigns</p>
+            
+            <div class="video-showcase">
+                <!-- Video 1 -->
+                <div class="video-phone">
+                    <video controls loop muted playsinline>
+                        <source src="cloth.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="play-overlay">
+                        <i class="fas fa-play-circle"></i>
+                    </div>
+                </div>
+
+                <!-- Video 2 -->
+                <div class="video-phone">
+                    <video controls loop muted playsinline>
+                        <source src="foodddy.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="play-overlay">
+                        <i class="fas fa-play-circle"></i>
+                    </div>
+                </div>
+
+                <!-- Video 3 -->
+                <div class="video-phone">
+                    <video controls loop muted playsinline>
+                        <source src="cofee.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="play-overlay">
+                        <i class="fas fa-play-circle"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
      <!-- DESIGN PORTFOLIO -->
     <section id="designs" class="projects">
         <div class="container">
@@ -1098,6 +1197,7 @@
 </body>
 
 </html>
+
 
 
 
