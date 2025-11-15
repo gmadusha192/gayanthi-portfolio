@@ -392,6 +392,42 @@
             list-style: none;
             columns: 2;
         }
+
+        /* DESIGN PORTFOLIO GRID */
+        .designs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .design-card {
+            background: #FFFFFF;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .design-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+        }
+
+        .design-card img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        .design-card:hover img {
+            transform: scale(1.05);
+        }
+        
         
         /* PROJECTS SECTION */
         .projects {
@@ -798,6 +834,48 @@
             </div>
         </div>
     </section>
+
+     <!-- DESIGN PORTFOLIO -->
+    <section id="designs" class="projects">
+        <div class="container">
+            <h2 class="section-title">Sample Work - Artwork</h2>
+            <p style="text-align: center; margin-bottom: 3rem; color: #555;">Social media posts and marketing materials designed for various campaigns</p>
+            
+            <div class="designs-grid">
+                <!-- Design Post 1 -->
+                <div class="design-card">
+                    <img src="visa.png" alt="Social Media Design 1">
+                </div>
+
+                <!-- Design Post 2 -->
+                <div class="design-card">
+                    <img src="cocktail.png" alt="Social Media Design 2">
+                </div>
+
+                <!-- Design Post 3 -->
+                <div class="design-card">
+                    <img src="fooddd.png" alt="Social Media Design 3">
+                </div>
+
+                <!-- Design Post 4 -->
+                <div class="design-card">
+                    <img src="077 062 0530,076 221 0738.png" alt="Social Media Design 4">
+                </div>
+
+                <!-- Design Post 5 -->
+                <div class="design-card">
+                    <img src="get together.jpg" alt="Social Media Design 5">
+                </div>
+
+                <!-- Design Post 6 -->
+                <div class="design-card">
+                    <img src="kalhara.png" alt="Social Media Design 6">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
     
     <section id="experience" class="experience">
         <div class="container">
@@ -941,54 +1019,7 @@
         </div>
     </section>
 
-    <!-- DESIGN PORTFOLIO -->
-    <section id="designs" class="projects">
-        <div class="container">
-            <h2 class="section-title">Design Portfolio</h2>
-            <p style="text-align: center; margin-bottom: 3rem; color: #555;">Social media posts and marketing materials designed for various campaigns</p>
-            
-            <div class="projects-grid">
-                <!-- Design Post 1 -->
-                <div class="project-card">
-                    <div class="project-image" style="background-image: url('kalhara.png');"></div>
-                    <div class="project-content">
-                        <h3>Social Media Campaign</h3>
-                        <p>Engaging social media post design for digital marketing campaign</p>
-                        <div class="tools">
-                            <span class="tool-tag">Canva</span>
-                            <span class="tool-tag">Social Media</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Design Post 2 -->
-                <div class="project-card">
-                    <div class="project-image" style="background-image: url('kalhara\ 1.png');"></div>
-                    <div class="project-content">
-                        <h3>Brand Promotion</h3>
-                        <p>Creative promotional content with modern design aesthetics</p>
-                        <div class="tools">
-                            <span class="tool-tag">Canva</span>
-                            <span class="tool-tag">Branding</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Design Post 3 -->
-                <div class="project-card">
-                    <div class="project-image" style="background-image: url('get\ together.jpg');"></div>
-                    <div class="project-content">
-                        <h3>Content Marketing</h3>
-                        <p>Eye-catching visual content for content marketing strategy</p>
-                        <div class="tools">
-                            <span class="tool-tag">Adobe XD</span>
-                            <span class="tool-tag">Marketing</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    
 
 
 
@@ -1067,6 +1098,7 @@
 </body>
 
 </html>
+
 
 
 
